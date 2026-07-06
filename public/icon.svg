@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="96" fill="#0a2540"/>
+  <text x="256" y="220" text-anchor="middle" fill="white" font-family="Arial Black, sans-serif" font-size="120" font-weight="900">ASL</text>
+  <path d="M120 280 C180 240, 280 230, 392 260" stroke="#f37021" stroke-width="16" stroke-linecap="round" fill="none"/>
+  <text x="256" y="360" text-anchor="middle" fill="#f37021" font-family="Arial, sans-serif" font-size="48" font-weight="700" letter-spacing="8">SPORTS</text>
+</svg>

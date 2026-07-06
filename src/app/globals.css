@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --asl-navy: #0a2540;
+  --asl-navy-dark: #061829;
+  --asl-navy-light: #123456;
+  --asl-orange: #f37021;
+  --asl-orange-dark: #d95f15;
+  --asl-orange-darker: #c45410;
+  --asl-blue: #1a6fd4;
+  --asl-blue-light: #2580e8;
+  --asl-gray: #eef1f5;
+  --background: #eef1f5;
+  --foreground: #0a2540;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-asl-navy: var(--asl-navy);
+  --color-asl-navy-dark: var(--asl-navy-dark);
+  --color-asl-navy-light: var(--asl-navy-light);
+  --color-asl-orange: var(--asl-orange);
+  --color-asl-orange-dark: var(--asl-orange-dark);
+  --color-asl-orange-darker: var(--asl-orange-darker);
+  --color-asl-blue: var(--asl-blue);
+  --color-asl-blue-light: var(--asl-blue-light);
+  --color-asl-gray: var(--asl-gray);
+  --font-sans: var(--font-cairo);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-cairo), "Segoe UI", Tahoma, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes highlight-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(243, 112, 33, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(243, 112, 33, 0.08);
+  }
+}
+
+.animate-highlight {
+  animation: highlight-pulse 2.5s ease-in-out infinite;
+}
+
+select option {
+  background: white;
+  color: var(--asl-navy);
 }
